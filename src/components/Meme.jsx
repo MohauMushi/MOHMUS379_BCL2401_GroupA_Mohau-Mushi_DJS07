@@ -5,7 +5,11 @@ export default function Meme() {
 	/**
 	 * new state called `memeImage` with an empty string as default. When the getMemeImage function is called, update the `memeImage` state to be the random chosen image URL
 	 */
-	const [memeImage, setMemeImage] = React.useState("");
+	const [meme, setMeme] = React.useState({
+		topText: "",
+		bottomText: "",
+		randomImage: "http://i.imgflip.com/1bij.jpg"
+	});
 
 	function getMemeImage(){
 		const memesArray = memesData.data.memes;
