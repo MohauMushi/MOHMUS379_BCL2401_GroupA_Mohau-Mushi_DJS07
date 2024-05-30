@@ -24,6 +24,14 @@ export default function Meme() {
 		}))
 		
 	}
+
+	function handleChange(event){
+		const {name, value} = event.target
+		setMeme(prevMeme => ({
+			...prevMeme, 
+			[name]: value
+		}))
+	}
 	
   return (
     <main>
@@ -48,8 +56,8 @@ export default function Meme() {
       </div>
 	  <div className="meme">
 	    <img src={meme.randomImage} className="meme--image"></img>
-	    <h2 className="meme--text top">One does not simply</h2>
-	    <h2 className="meme--text bottom">Walk into Mordor</h2>
+	    <h2 className="meme--text top">{meme.topText}</h2>
+	    <h2 className="meme--text bottom">{meme.bottomText}</h2>
 	  </div>
     </main>
   );
