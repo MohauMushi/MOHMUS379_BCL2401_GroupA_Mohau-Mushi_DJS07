@@ -32,11 +32,15 @@ export default function Meme() {
           type="text"
           placeholder="Shut up"
           className="form--input"
+		  name="topText"
+		  value={meme.topText}
         />
         <input
           type="text"
           placeholder="and take my money"
           className="form--input"
+		  name="bottomText"
+		  value={meme.bottomText}
         />
         <button className="form--button" onClick={getMemeImage}>Get a new meme image 🖼</button>
       </div>
